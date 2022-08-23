@@ -69,3 +69,8 @@ jobs:
                     -Wno-dev"
       - name: Build project
         run:  cmake --build build
+      - name: Step Export - Use the Upload Artifact GitHub Action
+        uses: actions/upload-artifact@v2
+        with: 
+          name: assets-for-download
+          path: build
